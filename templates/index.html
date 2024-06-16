@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Price Prediction</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Stock Price Prediction for Next Year</h1>
+        <form method="post" class="mt-4">
+            <div class="form-group">
+                <label for="stock_name">Enter Stock Name:</label>
+                <input type="text" class="form-control" id="stock_name" name="stock_name" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Predict</button>
+        </form>
+        {% if prediction %}
+            <h2 class="mt-4">Prediction: {{ prediction }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>
